@@ -11,6 +11,41 @@ export const Container = styled.div`
   padding: 40px 20px;
 `;
 
+export const Form = styled.form`
+  margin: 80px auto;
+  width: 340px;
+  text-align: center;
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: #666360;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    & + input {
+      margin-top: 8px;
+    }
+
+    &::placeholder {
+      color: #666360;
+    }
+  }
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  > a {
+    color: #f4ede8;
+    display: block;
+    margin-top: 24px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+`;
+
 export const Title = styled.h1`
   font-size: 48px;
   color: #3a3a3a;
@@ -21,24 +56,9 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   margin-top: -150px;
-  button {
-    border: none;
-    width: 10px;
-    margin-left: 270px;
-
-    img {
-      height: 80px;
-      transition: all 0.2s;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
 `;
 
 export const Card = styled.div`
-  /* #FF872C */
   background: ${({ total }: CardProps): string => (total ? '#FF872C' : '#fff')};
   padding: 22px 32px;
   border-radius: 5px;
@@ -96,6 +116,26 @@ export const TableContainer = styled.section`
 
       &.outcome {
         color: #e83f5b;
+      }
+
+      input {
+        border: 1px solid #969cb3;
+        border-radius: 5px;
+        color: #666;
+      }
+
+      button {
+        width: 100px;
+        height: 30px;
+        background: #12a454;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        transition: 0.2s;
+
+        &:hover {
+          background: #149023;
+        }
       }
     }
 

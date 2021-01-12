@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo1.png';
 
 interface HeaderProps {
   size?: 'small' | 'large';
@@ -13,11 +13,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
   <Container size={size}>
     <header>
-      <img src={Logo} alt="GoFinances" />
+      <a href="/">
+        <img src={Logo} alt="GoFinances" />
+      </a>
       <nav>
-        {
-          // Todo
-        }
+        <a href="/">Sair</a>
       </nav>
     </header>
   </Container>
